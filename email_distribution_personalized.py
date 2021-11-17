@@ -13,28 +13,30 @@ import ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-html_message = """
-<head>
-    <style>
-        #customstyle {
-        border: 2px solid red;
-        border-radius: 25px;
-        padding: 50px;
-        }
-    </style>
-</head>
-<body>
-<div id="customstyle">
-    <center>
-        <div style='font-family: Courier; font-weight:normal; padding:20px; font-size: 20px'>
-            <a>Hi %s, tomorrow we will have a planned an electricity outage, please take your devices off.<br> Thanks is advance!</a>        </div>
-    </center>
-</div>
-</body>
-"""
+html_message = ("\n"
+                "<head>\n"
+                "    <style>\n"
+                "        #customstyle {\n"
+                "        border: 2px solid red;\n"
+                "        border-radius: 25px;\n"
+                "        padding: 50px;\n"
+                "        }\n"
+                "    </style>\n"
+                "</head>\n"
+                "<body>\n"
+                "<div id=\"customstyle\">\n"
+                "    <center>\n"
+                "        <div style='font-family: Courier; font-weight:normal; padding:20px; font-size: 20px'>\n"
+                "<a>Hi %s, tomorrow we will have a planned an electricity outage, please take your devices off.<br> "
+                "Thanks is \n "
+                "            advance!</a>        \n"
+                "            </div>\n"
+                "    </center>\n"
+                "</div>\n"
+                "</body>\n")
 sender = 'noreply.storesales@gmail.com'
 message = MIMEMultipart()
-message['Subject'] = 'Service outage'
+message['Subject'] = 'Service Outage'
 message['From'] = sender
 
 context = ssl.create_default_context()
