@@ -28,7 +28,7 @@ html_message = ("\n"
                 "    <center>\n"
                 "        <div style='font-family: Courier; font-weight:normal; padding:20px; font-size: 20px'>\n"
                 "<a>Hi %s, tomorrow we will have a planned an electricity outage, please take your devices off.<br> "
-                "Thanks is \n "
+                "Thanks in \n "
                 "            advance!</a>        \n"
                 "            </div>\n"
                 "    </center>\n"
@@ -36,7 +36,7 @@ html_message = ("\n"
                 "</body>\n")
 sender = 'noreply.storesales@gmail.com'
 message = MIMEMultipart()
-message['Subject'] = 'Service Outage'
+message['Subject'] = 'Service Outage on 19.11.2021 at 16:00'
 message['From'] = sender
 
 context = ssl.create_default_context()
