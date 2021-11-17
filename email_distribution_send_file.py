@@ -1,13 +1,14 @@
 from configs import password
 
-import smtplib, ssl
+import smtplib
+import ssl
 from email import encoders
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 
-sender = 'sender@gmail.com'
-users = ['user@gmail.com']
+sender = 'noreply.storesales@gmail.com'
+users = ['innovationsolutions2019@gmail.com']
 all_users = ", ".join(users)
 
 message = MIMEMultipart()
@@ -19,7 +20,7 @@ lecture_text = MIMEText('Hello, there! \nPlease take a look at this lecture!', '
 
 message.attach(lecture_text)
 
-filename = 'email_lecture_2.pdf'
+filename = 'Chan J. - Python. Quick Start.pdf'
 
 with open(filename, 'rb') as attachment:
     part = MIMEBase('application/pdf', "octet-stream")

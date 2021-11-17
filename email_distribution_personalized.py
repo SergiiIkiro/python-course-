@@ -1,7 +1,15 @@
 import csv
-import smtplib, ssl
+
+with open('users.csv') as file:
+    reader = csv.reader(file)
+    next(reader)
+    for name, email, grade in reader:
+        print(f'Name: {name}\n | Email:{email}\n | Grade: {grade}\n ')
+
+
 from configs import password
-import smtplib, ssl
+import smtplib
+import ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
@@ -24,7 +32,7 @@ html_message = """
 </div>
 </body>
 """
-sender = 'sender@gmail.com'
+sender = 'noreply.storesales@gmail.com'
 message = MIMEMultipart()
 message['Subject'] = 'Service outage'
 message['From'] = sender
