@@ -5,7 +5,7 @@ import ssl
 server = None
 sender = 'noreply.storesales@gmail.com'                            # імейл відправника
 context = ssl.create_default_context()                             # містить переважно значення за замовчуванням для структур SSL, які пізніше створюються для з'єднань.
-users = ['innovationsolutions2019@gmail.com', 'sanchezs@ukr.net']  # список отримувачів
+users = ['innovationsolutions2019@gmail.com',]  # список отримувачів
 subject = 'Python mini course 2021'                                # Заголовок листа
 m = 'Hi there,\n How are you bro?)'                                # Повідомлення
 message = f'Subject: {subject}\n\n{m}'                             # Сукупність заголовка та повідомлення для відправки
